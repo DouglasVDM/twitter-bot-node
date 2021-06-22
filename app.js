@@ -23,8 +23,12 @@
 
 // blue();
 
-let green = () => {
-  console.log("This is a function expression")
+function callbackFunction(func) {
+  func();
 }
 
-green()
+let green = () => {
+  console.log("This is a function expression");
+}
+
+callbackFunction(green);
