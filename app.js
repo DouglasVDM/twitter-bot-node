@@ -15,4 +15,10 @@
 // }, 2000);
 
 // console.log(__dirname)
-console.log(__filename)
+// console.log(__filename)
+
+function blue() {
+  console.log("This is a function.");
+}
+
+blue();
