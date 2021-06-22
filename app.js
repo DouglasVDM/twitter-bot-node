@@ -1,5 +1,9 @@
-const helper = require("./helper");
+const events = require("events");
 
-console.log(helper.user("Alex"));
-console.log(helper.id("123"));
-console.log(helper.email("alex@gmail.co"));
+const myEmitter = new events.EventEmitter;
+
+myEmitter.on("test", (arg) => {
+  console.log(arg);
+});
+
+myEmitter.emit("test", "hello world");
