@@ -17,8 +17,14 @@
 // console.log(__dirname)
 // console.log(__filename)
 
-function blue() {
-  console.log("This is a function.");
+// function blue() {
+//   console.log("This is a function.");
+// }
+
+// blue();
+
+let green = () => {
+  console.log("This is a function expression")
 }
 
-blue();
+green()
