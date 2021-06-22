@@ -1,7 +1,10 @@
 const fs = require("fs");
 
-// 1st => read this file
-const text = fs.readFileSync("read-me.txt", "utf-8");
+// this does not block the code of the application
+fs.readFile("read-me.txt", "utf-8", function (error, data) {
+  console.log(data);
+  console.log(error);
+});
 
-// 2nd => take the contents of text variable and push it into write,txt
-fs.writeFileSync("write.txt", text);
+// this code still fires while waiting on the file to read
+console.log("hello there");
