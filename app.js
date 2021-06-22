@@ -1,3 +1,3 @@
 const fs = require("fs");
 
-fs.mkdirSync("my-folder");
+fs.rmdirSync("my-folder");
